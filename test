@@ -1,1 +1,30 @@
-123
+#setting
+git commit --global user.name woojin8098
+git commit --global user.email woojin0624@postech.ac.kr
+mkdir ~/RL #폴더 생성
+cd ~/RL #폴더 접근
+git init
+git clone https://github.com/Woojin8098/Reinforcement-Learning.git
+cd Reinforcement-Learning
+
+#push
+git status
+git add
+git add.
+git commit -m "~"
+git push
+
+#commit reset
+git log
+q #quit
+git reset --hard () #이후 commit 삭제
+git reset --soft () #이후 commit 보존
+git push -f
+
+#commit edit
+git commit --amend
+a
+edit
+esc
+:wq!
+
