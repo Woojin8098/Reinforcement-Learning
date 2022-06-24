@@ -1,5 +1,3 @@
-branch test
-
 #setting
 git commit --global user.name woojin8098
 git commit --global user.email woojin0624@postech.ac.kr
@@ -16,7 +14,7 @@ git add.
 git commit -m "~"
 git push
 woojin8098
-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
+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
 
 #commit reset
 git log
@@ -35,5 +33,10 @@ ctrl+x
 git branch
 git branch () #branch 추가
 git checkout () #branch 접근
+add + commit
+git checkout master
+git merge ()
+git push
+git branch -d ()
 
 
