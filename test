@@ -13,6 +13,8 @@ git add
 git add.
 git commit -m "~"
 git push
+woojin8098
+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
 
 #commit reset
 git log
@@ -25,6 +27,11 @@ git push -f
 git commit --amend
 a
 edit
-esc
-:wq!
+ctrl+x
+
+#branch edit
+git branch
+git branch () #branch 추가
+git checkout () #branch 접근
+
 
