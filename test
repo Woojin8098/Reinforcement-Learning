@@ -1,5 +1,5 @@
 #token
-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
+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
 
 #setting
 git commit --global user.name woojin8098
@@ -17,7 +17,7 @@ git add.
 git commit -m "~"
 git push
 woojin8098
-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
+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
 
 #commit reset
 git log
