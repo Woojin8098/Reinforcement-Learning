@@ -35,8 +35,10 @@ git branch () #branch 추가
 git checkout () #branch 접근
 add + commit
 git checkout master
-git merge ()
+git merge () #conflict 발생시 코드 직접 수정
 git push
 git branch -d ()
+
+#9강부터 https://youtube.com/playlist?list=PLRx0vPvlEmdD5FLIdwTM4mKBgyjv4no81
 
 
