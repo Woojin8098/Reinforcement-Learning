@@ -2,8 +2,9 @@
 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
 
 #setting
-git commit --global user.name woojin8098
-git commit --global user.email woojin0624@postech.ac.kr
+git config --global user.name woojin8098
+git config --global user.email woojin0624@postech.ac.kr
+git config --list
 mkdir ~/RL #폴더 생성
 cd ~/RL #폴더 접근
 git init
@@ -41,6 +42,9 @@ git checkout master
 git merge () #conflict 발생시 코드 직접 수정
 git push
 git branch -d ()
+
+#extract source code
+git archive --format=zip master -o ().zip
 
 #9강부터 https://youtube.com/playlist?list=PLRx0vPvlEmdD5FLIdwTM4mKBgyjv4no81
 
