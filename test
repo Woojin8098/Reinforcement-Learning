@@ -5,6 +5,7 @@ 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
 git config --global user.name woojin8098
 git config --global user.email woojin0624@postech.ac.kr
 git config --list
+git config --global credential.helper cache
 mkdir ~/RL #폴더 생성
 cd ~/RL #폴더 접근
 git init
