@@ -1,0 +1,19 @@
+#1 Learning agile and dynamic motor skills forlegged robots
+
+legged robot은 wheel robot 등과는 다르게 contact point에 자유도가 있어 복잡하고 험한 지형과 장애물에 강점이 있음
+그 중에 hydraulic actuator로 작동하는 robot은 높은 에너지 밀도로 동작할 수 있지만 무게가 무겁고 소음과 연기로 인해 indoor에서의 사용이 어려움
+따라서 본 연구에서는 electric actuator로 작동하는 ANYmal이라는 robot을 사용함
+contact point가 시간에 따라 변하고 미리 결정할 수 없다는 특성 때문에 legged robot의 제어는 어려움
+기존의 방식엔 modular controller design과 trajectory optimization이 있음
+modular controller design은 제어 문제를 여러 submodule로 나누어 풀어내는 방법
+trajectory optimization은 planning과 tracking으로 나뉘는데 planning은 rigid-body dynamics와 numerical optimization을 기반으로 목표까지의 최적의 경로를 찾는 문제이고 tracking은 그 path를 따라가는 문제
+위 두 방식은 한계가 존재 -> 강화학습(reinforcement learning)으로 해결 가능
+RL은 trial을 통해 data를 얻고 이를 기반으로 cost(or reward) function을 optimize하는 방식
+로봇 제어에 대한 RL은 복잡성, 비용 등의 문제로 시뮬레이션에 국한됨
+그러나 시뮬레이션과 현실은 차이가 있기 때문에 시뮬레이션 결과를 그대로 현실의 physical system에 적용하는 것은 어려움 
+command와 실제 action(torque) 사이의 관계를 "actuactor net"으로 학습시켜 sim-to-real을 가능하게 함
+위 방법을 이용하여 학습하는 것은 하나의 personal computer에서도 가능하며 실행시간 측면에서 상당히 효율적이다. 
+
+
+
+
