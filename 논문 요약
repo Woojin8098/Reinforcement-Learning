@@ -12,8 +12,27 @@ RL은 trial을 통해 data를 얻고 이를 기반으로 cost(or reward) functio
 로봇 제어에 대한 RL은 복잡성, 비용 등의 문제로 시뮬레이션에 국한됨
 그러나 시뮬레이션과 현실은 차이가 있기 때문에 시뮬레이션 결과를 그대로 현실의 physical system에 적용하는 것은 어려움 
 command와 실제 action(torque) 사이의 관계를 "actuactor net"으로 학습시켜 sim-to-real을 가능하게 함
-위 방법을 이용하여 학습하는 것은 하나의 personal computer에서도 가능하며 실행시간 측면에서 상당히 효율적이다. 
+위 방법을 이용하여 학습하는 것은 하나의 personal computer에서도 가능하며 실행시간 측면에서 상당히 효율적
 
+result->
+우선 조이스틱으로 랜덤 명령을 내리고 랜덤하게 외부에서 힘을 가해 새로운 controller를 학습시킴
+임의의 속도 명령을 연속적으로 주었을 때 그 error가 기존에 가장 성능이 좋던 controller보다 더 작게 나타남
+또 torque와 power 측면에서도 기존 controller보다 더 뛰어남
+직진 명령에 대해서는 높은 속도에서 특정한 걸음걸이 (flying trot)가 나타남 -> 이는 보통의 사족보행 동물에게서 나타나는 걸음걸이와 유사함
+명령과 실제 속도의 error는 실제에서 시뮬레이션보다 아주 조금 크게 나타남
+직진 명령은 -1~1(m/s)에서 학습했으나 더 높은 속도인 1.2에서도 잘 작동함
+Bellicoso의 기존 연구에서 나온 두가지 trot와 비교해도 속도error, power efficiency, torque 측면에서 모두 뛰어남
+이제 축소된 대안으로 ideal actuator model과 analytical actuator model을 이용한 방법을 사용해보았고 그 결과는 실패
+이번엔 속도에 중점을 두고 실험, 기존 ANYmal의 최고 속도는 1.2였으나 이 방법으로는 시뮬레이션으로 1.58, 실제로는 1.5에 도달함, 이 때 나타나는 걸음걸이는 자연에서 흔히 관찰되는 형태가 아님, optimal은 아니고 그와 가까운 방법으로 예상
+legged robot은 넘어지기가 쉬움 -> 스스로 뒤집는 autonomous recovery가 필요 -> 복잡하고 큰 system에서 autonomous recovery를 dynamics 기반으로 구현하는 것은 불가능에 가까움
+넘어졌을 때는 발 네개 말고도 특정되지 않은 contact point가 생기기 때문에 더 역동적인 움직임이 필요 -> 황보제민 교수님 이전 연구 방식으로 해결
 
+discussion->
 
+matrerials and methods->
+1. Modeling rigid-body dynamics
+이전 연구의 방법을 사용
+2. Modeling the actuation
+actuator network: history of position error와 velocity를 가지고 desired action을 위한 torque를 계산해냄
+actuator state는 partially observable -> history of position error와 velocity로 internal state를 알 수 있다고 가정 -> history의 길이는 너무 짧아도, 너무 길어도 안됨
 
