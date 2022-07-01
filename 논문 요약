@@ -31,8 +31,14 @@ discussion->
 
 matrerials and methods->
 1. Modeling rigid-body dynamics
-이전 연구의 방법을 사용
+이전 연구의 방법을 사용: rigid-body contact solver
+
 2. Modeling the actuation
-actuator network: history of position error와 velocity를 가지고 desired action을 위한 torque를 계산해냄
-actuator state는 partially observable -> history of position error와 velocity로 internal state를 알 수 있다고 가정 -> history의 길이는 너무 짧아도, 너무 길어도 안됨
+actuator network: history of position error와 velocity를 가지고 desired position을 위한 torque를 계산해냄 -> 각 actuator는 독립적이라고 가정
+actuator state는 partially observable -> history of position error와 velocity로 internal state를 알 수 있다고 가정 -> history의 길이는 너무 짧아도, 너무 길어도 안됨 -> 현재, 0.01초 전, 0.02초 전 사용
+결론적으로 32 nodes의 hidden layer 3개를 activation function: softsign으로 학습시킴 (MLP)
+
+3. Reinforcement Learning
+
+
 

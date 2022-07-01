@@ -1,24 +1,21 @@
 
 
 #setting
-git config --global user.name woojin8098
-git config --global user.email woojin0624@postech.ac.kr
+git config --global user.name ()
+git config --global user.email ()
 git config --list
 git config --global credential.helper cache
-mkdir ~/RL #폴더 생성
-cd ~/RL #폴더 접근
+mkdir ~ #폴더 생성
+cd ~ #폴더 접근
 git init
-git clone https://github.com/Woojin8098/Reinforcement-Learning.git
-cd Reinforcement-Learning
+git clone ()
 
 #push
 git status
 git add
-git add.
+git add .
 git commit -m "~"
 git push
-woojin8098
-
 
 #commit reset
 git log
@@ -46,6 +43,5 @@ git branch -d ()
 #extract source code
 git archive --format=zip master -o ().zip
 
-#9강부터 https://youtube.com/playlist?list=PLRx0vPvlEmdD5FLIdwTM4mKBgyjv4no81
 
 
